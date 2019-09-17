@@ -12,6 +12,7 @@
 
 alias Getaways.Repo
 alias Getaways.Vacation.Place
+alias Getaways.Accounts.User
 
 places = [
   %Place{
@@ -31,4 +32,23 @@ places = [
   }
 ]
 
+users = [
+  %User{
+    name: "Patrick Oryono",
+    email: "patricken08@gmail.com",
+    password: Comeonin.Bcrypt.hashpwsalt("password")
+  },
+  %User{
+    name: "Scovia Akwii",
+    email: "scovia@home.com",
+    password: Comeonin.Bcrypt.hashpwsalt("password")
+  },
+  %User{
+    name: "Patricia Awilli",
+    email: "patricia@home.com",
+    password: Comeonin.Bcrypt.hashpwsalt("password")
+  }
+]
+
 Enum.each(places, fn place -> Repo.insert!(place) end)
+Enum.each(users, fn user -> Repo.insert!(user) end)

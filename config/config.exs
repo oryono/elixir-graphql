@@ -10,6 +10,11 @@ use Mix.Config
 config :getaways,
   ecto_repos: [Getaways.Repo]
 
+# Guardian config
+config :getaways, Getaways.Guardian,
+  issuer: "Getaways",
+  secret_key: "lHcSDOaJvV/afPH7zZdtnNumEyqu87BknwUsq+tWekUXYUdLJ9Tco6jb7jM3+JYw"
+
 # Configures the endpoint
 config :getaways, GetawaysWeb.Endpoint,
   url: [host: "localhost"],
