@@ -6,6 +6,8 @@ defmodule Getaways.Repo.Migrations.CreateUsers do
       add :name, :string
       add :email, :string
       add :password, :string
+      add :user_type, :integer
+      add :school_id, :integer
 
       timestamps()
     end
